@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TextInput from '../Visual/TextInput';
+import TextInput from '../visual/TextInput';
 import Store, { StoreProp } from '../../store/Store';
 
 class AppContainer extends Component<StoreProp> {
