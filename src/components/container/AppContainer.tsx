@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import TextInput from '../Visual/TextInput';
-import Store from '../../store/Store';
+import Store, { StoreProp } from '../../store/Store';
 
-class AppContainer extends Component {
-    constructor(props){
-        super(props);
-    }
-
+class AppContainer extends Component<StoreProp> {
     render () {
-        let store = this.props.store;
+        const store = this.props.store;
         return <div>
+            <h1>Grackets Test</h1>
             <TextInput onChange={store.set('num1')} value={store.get('num1')}/>
             <TextInput onChange={store.set('num2')} value={store.get('num2')}/>
             Sum: {store.get('num1') + store.get('num2')}
